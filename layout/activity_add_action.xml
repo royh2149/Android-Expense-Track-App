@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/addActionBgColor"
+    tools:context=".AddActionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newDate"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:id="@+id/npDay"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:id="@+id/npMonth"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:id="@+id/npYear"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incomeOrOutcome"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/income"
+            android:id="@+id/rbIncome"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/outcome"
+            android:id="@+id/rbOutcome"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enterSum"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/enterSum"
+        android:inputType="numberDecimal"
+        android:id="@+id/etSum"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/description"
+        android:id="@+id/etDesc"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:prompt="@string/whatCategory"
+        android:id="@+id/spCategory"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectImage"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/icon"
+        android:tooltipText="@string/selectImage"
+        android:onClick="launchCamera"
+        android:id="@+id/ibPicture"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="cancel"
+            android:layout_margin="15dp"
+            android:text="@string/cancel"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="submit"
+            android:layout_margin="15dp"
+            android:text="@string/submit"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

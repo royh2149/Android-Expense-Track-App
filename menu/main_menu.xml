@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/optNewAction"
+        android:orderInCategory="10"
+        android:title="@string/newAction"
+        />
+
+    <item android:id="@+id/optSettings"
+        android:orderInCategory="100"
+        android:title="@string/settings"
+        />
+
+    <item android:id="@+id/optGraphs"
+        android:orderInCategory="200"
+        android:title="@string/graphs"
+        />
+
+    <item android:id="@+id/optAnalytics"
+        android:orderInCategory="300"
+        android:title="@string/analytics"
+        />
+
+    <item android:id="@+id/optSignOut"
+        android:orderInCategory="400"
+        android:title="@string/signout"
+        />
+
+</menu>

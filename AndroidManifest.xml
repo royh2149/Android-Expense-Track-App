@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.expensetracker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- android:icon="@mipmap/ic_launcher" -->
+    <!--         android:roundIcon="@mipmap/ic_launcher_round" -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ExpenseTracker">
+        <receiver
+            android:name=".ActionSMSReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <service
+            android:name=".MonthlyGoalsService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".SendNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MonthlyGoalsActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <receiver
+            android:name=".InternetConnectionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GraphsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AnalyticsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddActionActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
